@@ -1,0 +1,25 @@
+@import './animations.css';
+
+.button{
+  padding: 10px 20px;
+  font-family:'Times New Roman', Times, serif ;
+  font-size: 1rem;
+  background-color: #ff6347;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+  height: 40px; 
+  text-align: center; 
+  gap: 10px;
+  margin-top: 30px;
+  animation: pulse 2s ease-in-out infinite;
+  animation-fill-mode: both;
+
+}
+
+.button:hover {
+  background-color: #ff4500;
+}
+
