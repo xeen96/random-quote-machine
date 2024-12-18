@@ -19,7 +19,9 @@ const useRandomQuote = () => {
     getRandomQuote();
   }, []);  
 
-  return { quote, author, getRandomQuote }; 
+  const tweetText = `${quote} - ${author}  #quotes`;
+
+  return { quote, author, tweetText, getRandomQuote }; 
 };
 
 export default useRandomQuote;

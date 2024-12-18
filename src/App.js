@@ -1,7 +1,6 @@
 import React from "react";
 import QuoteBox from "./components/quoteBox";
-import Button from "./components/button";
-import LinkButton from "./components/linkButton";
+import QuoteButtons from "./components/quoteButtons";
 import './styles/App.css';
 
 import './API/quotesApi';
@@ -9,25 +8,18 @@ import './API/quotesApi';
 import useRandomQuote from './hooks/useRandomQuote';  
 
 function App() {
-  const { quote, author, getRandomQuote } = useRandomQuote();
-  const tweetText = `${quote} - ${author}  #quotes`;
-
-  const btns = (
-    <>
-      <Button id="new-quote" innerText="New quote" onClick={getRandomQuote} />
-      <LinkButton
-        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`}
-        id="tweet-quote"
-        title="Tweet this quote!"
-        icon="fa fa-twitter"
-      />
-    </>
-  );
+  const { quote, author, tweetText, getRandomQuote } = useRandomQuote();
 
   return (
     <div className="App">
       <div className="wrapper">
-        <QuoteBox quote={quote} author={author} buttons={btns} />
+        <QuoteBox 
+          quote={quote} 
+          author={author} 
+          buttons={
+            <QuoteButtons getRandomQuote={getRandomQuote} tweetText={tweetText} />
+          } 
+        />
       </div>
     </div>
   );
