@@ -1,10 +1,10 @@
-# Random Quote Generator
+# Random Quote Machine
 
 This is one of the projects required for certification on [freeCodeCamp](https://www.freecodecamp.org/). It is part of the **Front End Development Libraries Certification** curriculum.
 
 ## Project Description
 
-The Random Quote Generator is a React-based application that dynamically generates random quotes and their authors. Users can:
+The Random Quote Machine is a React-based application that dynamically generates random quotes and their authors. Users can:
 
 - View a new random quote at the click of a button.
 - Share the current quote directly on Twitter using the "Tweet this quote!" button.
@@ -46,7 +46,7 @@ To run the project locally:
    ```
 2. Navigate into the project directory:
    ```bash
-   cd random-quote-generator
+   cd random-quote-machine
    ```
 3. Install dependencies:
    ```bash
